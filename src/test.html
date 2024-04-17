@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/drawers.jpg"
+    />
+
+    <title>Article preview component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              LightGrayishBlue: "hsl(210, 46%, 95%)",
+              VeryDarkGrayishBlue: "hsl(217, 19%, 35%)",
+              DesaturatedDarkBlue: "hsl(214, 17%, 51%)",
+              GrayishBlue: "hsl(212, 23%, 69%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-LightGrayishBlue">
+    <div
+      class="flex flex-col w-5/6 md:w-2/3 m-auto mt-40 bg-white rounded-lg shadow-lg lg:flex-row lg:w-[52%] relative"
+    >
+      <div class="lg:w-[40%]">
+        <img
+          class="w-full lg:h-full h-52 object-cover object-center rounded-t-lg lg:rounded-r-none lg:rounded-l-lg"
+          src="images/drawers.jpg"
+          alt="drawers"
+        />
+      </div>
+
+      <div class="pt-10 px-7 lg:w-[60%] lg:px-12 lg:pb-2 lg:pr-16">
+        <h4
+          class="text-VeryDarkGrayishBlue text-base lg:text-lg font-bold font-[Manrope] mb-3"
+        >
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h4>
+        <p class="text-DesaturatedDarkBlue text-sm font-[Manrope]">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+
+        <!-- <div
+          id="share-bubble"
+          class="flex items-center absolute -right-8 top-1/2 w-fit bg-VeryDarkGrayishBlue px-8 py-4 rounded-lg shadow-md hidden lg:hidden"
+        >
+          <h6
+            class="text-GrayishBlue tracking-[0.2rem] text-[0.7rem] font-[Manrope]"
+          >
+            SHARE
+          </h6>
+          <div class="ml-5 flex items-center">
+            <a href="#" class=""
+              ><img src="images/icon-facebook.svg" alt="icon-facebook"
+            /></a>
+            <a href="#" class="mx-4"
+              ><img src="images/icon-twitter.svg" alt="icon-twitter"
+            /></a>
+            <a href="#" class=""
+              ><img src="images/icon-pinterest.svg" alt="icon-pinterest"
+            /></a>
+          </div>
+          <div
+            class="absolute bottom-3 left-1/2 transform -translate-x-1/2 rotate-45"
+          >
+            <div class="absolute w-4 h-4 bg-VeryDarkGrayishBlue"></div>
+            <div
+              class="absolute w-0 h-0 border-solid border-transparent border-t-4 border-black"
+            ></div>
+          </div>
+        </div> -->
+
+        <!-- <div class="items-center relative py-6 hidden lg:flex">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="images/avatar-michelle.jpg"
+            alt="avatar-michelle"
+          />
+          <div class="ml-4">
+            <h6
+              class="font-bold font-[Manrope] text-VeryDarkGrayishBlue text-[0.8rem]"
+            >
+              Michelle Appleton
+            </h6>
+            <p class="text-GrayishBlue text-[0.8rem]">28 Jun 2020</p>
+          </div>
+          <div
+            id="share-button-lg"
+            class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-0 hover:bg-[#6E8098]"
+          >
+            <svg
+              class="hover:fill-LightGrayishBlue pl-2 pt-2"
+              fill="#6E8098"
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="33"
+            >
+              <path
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              />
+            </svg>
+          </div>
+        </div> -->
+      </div>
+
+      <div id="name-tag" class="flex items-center relative px-7 py-5 lg:hidden">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="images/avatar-michelle.jpg"
+          alt="avatar-michelle"
+        />
+        <div class="ml-4">
+          <h6
+            class="font-bold font-[Manrope] text-VeryDarkGrayishBlue text-[0.8rem]"
+          >
+            Michelle Appleton
+          </h6>
+          <p class="text-GrayishBlue text-[0.8rem]">28 Jun 2020</p>
+        </div>
+        <div
+          id="share-button"
+          class="w-8 h-8 rounded-full bg-LightGrayishBlue absolute right-7 hover:bg-[#6E8098]"
+        >
+          <svg
+            class="hover:fill-LightGrayishBlue pl-2 pt-2"
+            fill="#6E8098"
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="33"
+          >
+            <path
+              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- <div
+        id="links-container"
+        class="flex items-center bg-VeryDarkGrayishBlue relative px-7 py-5 mt-5 hidden rounded-b-lg"
+      >
+        <h6
+          class="text-GrayishBlue tracking-[0.3rem] text-[0.8rem] font-[Manrope]"
+        >
+          SHARE
+        </h6>
+        <div class="ml-5 flex items-center">
+          <a href="#" class=""
+            ><img src="images/icon-facebook.svg" alt="icon-facebook"
+          /></a>
+          <a href="#" class="mx-4"
+            ><img src="images/icon-twitter.svg" alt="icon-twitter"
+          /></a>
+          <a href="#" class=""
+            ><img src="images/icon-pinterest.svg" alt="icon-pinterest"
+          /></a>
+        </div>
+        <div
+          id="share-button2"
+          class="w-8 h-8 rounded-full bg-[#6E8098] absolute right-7 hover:bg-LightGrayishBlue"
+        >
+          <svg
+            class="hover:fill-[#6E8098] pl-2 pt-2"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="33"
+          >
+            <path
+              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+            />
+          </svg>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="attribution fixed bottom-0">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Scurlly Rodrigues</a>.
+    </div>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .getElementById("share-button")
+        .addEventListener("click", toggleShare);
+      document
+        .getElementById("share-button2")
+        .addEventListener("click", toggleShare);
+
+      document
+        .getElementById("share-button-lg")
+        .addEventListener("click", function () {
+          document.getElementById("share-bubble").classList.toggle("hidden");
+          document.getElementById("share-bubble").classList.toggle("lg:hidden");
+        });
+
+      function toggleShare() {
+        document.getElementById("links-container").classList.toggle("hidden");
+        document.getElementById("name-tag").classList.toggle("hidden");
+      }
+    });
+  </script>
+</html>
